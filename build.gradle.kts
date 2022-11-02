@@ -1,5 +1,6 @@
 repositories {
-  maven { url = uri("https://repo.rd.zedev.net/artifactory/public/") }
+  mavenCentral()
+  // This will have to be changed to point to a repository containing jOOQ pro JARs
   maven { url = uri("https://repo.rd.zedev.net/artifactory/jooq-pro/") }
 }
 

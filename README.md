@@ -1,5 +1,9 @@
 I've encountered two bugs while using jOOQ against an Oracle database using r2dbc.
 
+This project includes several tests which use testcontainers to create an Oracle XE database; running the tests will require a functional docker environment. In order to build this project, the `build.gradle.kts` file will have to be modified to include a maven repository which contains the jOOQ pro dependencies.
+
+The two bugs are described below.
+
 ClassCastException
 --
 Statements which return a row count, such as `insert` and `update` cause a `ClassCastException` when that row count is assigned to a variable. The `statements resulting in a row count`/`insert without assigning result` test produces the following:
